@@ -1,0 +1,36 @@
+*{
+   padding: 0;
+   margin: 0; 
+}
+#share-btn{
+    position: relative;
+    width: max-content;
+    display: flex;
+    height: 40px;
+    padding: 0 10px;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid black;
+}
+.share-img{
+    width: 20px;
+    height: 20px;
+}
+.share-img img{
+    height: 100%;
+    width: 100%;
+}
+#share-popup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 512px;
+    min-height: 262px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
