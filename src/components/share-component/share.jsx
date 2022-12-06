@@ -1,6 +1,9 @@
 import React,{useState} from "react";
 import PropTypes from "prop-types";
+import mockData from './mockData/workspaceData.json';
+import Invite from "./invite";
 import "./share.css";
+import { useEffect } from "react";
 
 export default function Share({
   backgroundColor,
@@ -8,6 +11,8 @@ export default function Share({
   label,
   image,
   border,
+  workspaceDataApi,
+  updateApi,
   ...props
 }) {
   var getAbsPosition = function(el){
@@ -20,7 +25,7 @@ export default function Share({
             curtop += el.offsetTop-el.scrollTop;
             el = el.offsetParent;
             el2 = el2.parentNode;
-            while (el2 != el) {
+            while (el2 !== el) {
                 curleft -= el2.scrollLeft;
                 curtop -= el2.scrollTop;
                 el2 = el2.parentNode;
@@ -35,14 +40,16 @@ export default function Share({
     return [curtop, curleft];
 };
   const [popup, setPopup] = useState("")
+  const [data,setData] = useState("");
   return (
     <>
-    <h1>iug</h1>
     <div id="share-btn" style={{ backgroundColor, color, border:`1px solid ${border}` }} onClick={()=>{
+      if(popup){
+        setPopup("");
+        return;
+      }
       let [top,left]=(getAbsPosition(document.getElementById('share-btn')))
-      setPopup( <div id="share-popup" style={{top,left}}>
-      <h1>popup</h1>
-    </div>)
+      setPopup( <Invite top={top} left={left} data ={mockData} setData={setData} setPopup={setPopup} />)
     }}>
       <p>{label}</p>
       <div className="share-img">
@@ -60,6 +67,8 @@ Share.propTypes = {
   label: PropTypes.string.isRequired,
   image: PropTypes.oneOf(["black", "white"]),
   border: PropTypes.string,
+  workspaceDataApi: PropTypes.string.isRequired,
+  updateApi: PropTypes.string.isRequired,
 };
 
 Share.defaultProps = {
@@ -67,5 +76,7 @@ Share.defaultProps = {
   color: "white",
   label: "Share",
   image: "white",
-  border: 'black'
+  border: 'black',
+  workspaceDataApi:"",
+  updateApi:"",
 };

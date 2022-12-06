@@ -1,0 +1,18 @@
+.pill{
+    height: max-content;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin-left: 10px;
+    justify-content: space-around;
+    gap: 10px;
+    border: 1px solid rgb(187, 182, 182);
+    background-color: rgb(238, 197, 197);
+    border-radius: 5px;
+}
+.pill p{
+    margin-left: 10px;
+}
+.pill .close{
+    margin-right: 10px;
+}

@@ -2,10 +2,10 @@ import React from "react";
 import Share from "../components/share-component/share";
 
 export default{
-    title: "Main/share",
+    title: "Main/Share",
     component: Share,
     argTypes: {
-        border: {control: "color"}
+        border: {control: "color"},
     }
 };
 
@@ -13,7 +13,7 @@ const template = (args) => <Share {...args}/>;
 
 export const darkMode = template.bind({});
 
-export const lightMode = template.bind({});
+export const defaultMode = template.bind({});
 
 darkMode.args={
     backgroundColor: "black",
@@ -22,7 +22,7 @@ darkMode.args={
     label:'Share'
 }
 
-lightMode.args={
+defaultMode.args={
     backgroundColor: "white",
     color:'black',
     image:'black',

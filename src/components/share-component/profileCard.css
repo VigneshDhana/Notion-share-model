@@ -1,0 +1,13 @@
+.profile {
+    display: flex;
+    align-items: center;
+    width: 460px;
+    gap: 15px
+}
+
+.profilePic {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+}

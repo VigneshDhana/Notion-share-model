@@ -1,0 +1,12 @@
+{
+    "workspace": "Everyone at OSlash",
+    "noOfMembers": "3",
+    "access": "No access",
+    "groups":["Frontend Developers", "Backend Developers"],
+    "workspaceImage": "https://www.linkpicture.com/q/48_48.png",
+    "members":[
+        {"name":"wade Cooper", "email":"cooper@gmail.com","access":"No access", "image":"https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/01/dummy-profile-pic.jpg","group":"Frontend Developer"},
+        {"name":"Arlene Mccoy", "email":"mccoy@gmail.com","access":"No access", "image":"https://us.123rf.com/450wm/pandavector/pandavector1901/pandavector190105594/pandavector190105594.jpg?ver=6", "group":"Backend Developer"},
+        {"name":"Tom cook", "email":"cook@gmail.com","access":"No access", "image":"https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/01/dummy-profile-pic.jpg","group":"Frontend Developer"}
+    ]
+}
